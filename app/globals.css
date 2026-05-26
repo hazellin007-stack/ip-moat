@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
+/* ── 寓待品牌色系 ───────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --coral:     #D47854;
+  --coral-lt:  #F2E4DB;
+  --charcoal:  #47423F;
+  --blue-gray: #B6C6CF;
+  --warm-gray: #A09D95;
+  --bg:        #F5F4F2;
+  --bg-card:   #ECEAE6;
+  --bg-card-b: #C8D5DB;
+  --rule:      #D8D4CE;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-coral:     var(--coral);
+  --color-coral-lt:  var(--coral-lt);
+  --color-charcoal:  var(--charcoal);
+  --color-blue-gray: var(--blue-gray);
+  --color-warm-gray: var(--warm-gray);
+  --color-bg:        var(--bg);
+  --color-bg-card:   var(--bg-card);
+  --color-bg-card-b: var(--bg-card-b);
+  --color-rule:      var(--rule);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ── Base ──────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--charcoal);
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang TC',
+               'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography helpers ──────────────────────────────────── */
+.font-display {
+  font-family: 'BigShoulders Display', 'Arial Black', sans-serif;
+  font-weight: 700;
+}
+
+.font-en {
+  font-family: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+}
+
+/* ── Article prose ──────────────────────────────────────── */
+.prose-article {
+  line-height: 1.9;
+  font-size: 1.0625rem;
+  color: var(--charcoal);
+}
+.prose-article p { margin-bottom: 1.5rem; }
+.prose-article strong { color: var(--charcoal); font-weight: 600; }
+.prose-article em { font-style: normal; color: var(--coral); font-weight: 500; }
+
+/* ── Underline accent ──────────────────────────────────── */
+.underline-coral {
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+/* ── Section divider ────────────────────────────────────── */
+.section-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
 }
