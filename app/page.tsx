@@ -595,7 +595,9 @@ export default function Home() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
-              href="mailto:hazel@eudaimonia-ip.com"
+              href="https://mail.google.com/mail/?view=cm&to=hazel@eudaimonia-ip.com&su=IP%20策略諮詢"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-coral text-white font-en font-semibold text-sm px-7 py-3 rounded-full hover:opacity-90 transition-opacity"
             >
               跟我聊聊你的狀況 →
