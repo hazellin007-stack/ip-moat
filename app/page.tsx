@@ -603,7 +603,7 @@ export default function Home() {
               跟我聊聊你的狀況 →
             </a>
             <span className="text-white/25 text-xs font-en">
-              No commitment. Just a conversation.
+              We read every message.
             </span>
           </div>
 
