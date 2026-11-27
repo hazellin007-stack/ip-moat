@@ -595,7 +595,7 @@ export default function Home() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
-              href="https://mail.google.com/mail/?view=cm&to=hazel@eudaimonia-ip.com&su=IP%20策略諮詢"
+              href={`https://mail.google.com/mail/?view=cm&to=hazel@eudaimonia-ip.com&su=${encodeURIComponent('IP 策略諮詢')}&body=${encodeURIComponent('你好 Hazel，\n\n我在閱讀「從點子到護城河」之後想進一步了解 IP 策略諮詢。\n以下是我的基本狀況：\n\n1. 公司 / 產品名稱：\n2. 目前階段（概念 / 開發中 / 已上市）：\n3. 主要市場（台灣 / 亞洲 / 歐美 / 其他）：\n4. 目前 IP 狀況（無 / 申請中 / 已有專利商標）：\n5. 最想解決的問題或最擔心的事：\n\n期待你的回覆！')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-coral text-white font-en font-semibold text-sm px-7 py-3 rounded-full hover:opacity-90 transition-opacity"

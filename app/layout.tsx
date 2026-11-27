@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -33,6 +34,18 @@ export default function RootLayout({
       <body className={`${bricolage.variable} antialiased`}>
         {children}
         <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-71J5VP34VM"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-71J5VP34VM');
+          `}
+        </Script>
       </body>
     </html>
   );
